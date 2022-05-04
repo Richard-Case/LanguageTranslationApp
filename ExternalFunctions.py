@@ -5,6 +5,6 @@ def textMessageInput():
     return messageList
 
 #OPENING THE TRANSLATION FILE
-def openFile():
-    myFile = open("Text Speak.txt", "r")
+def openFile(fileName):
+    myFile = open(fileName, "r")
     return myFile
