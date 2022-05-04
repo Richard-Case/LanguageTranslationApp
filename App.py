@@ -20,6 +20,7 @@ for line in iter(myFile):
     textIndex = 0
 
     wordsInLine = line.split()
+	#print(wordsInLine)
     lengthOfList = len(wordsInLine)
 
     #Then I need to check the text message against index 0 in the list.
@@ -54,6 +55,7 @@ for value in textList:
 
 #Print the string to the console.
 print(translatedMessage)
+input("Press ENTER to exit.")
 
 #Close the file.
 myFile.close()
