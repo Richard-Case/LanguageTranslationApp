@@ -5,22 +5,23 @@
 
 ##############
 
-import ExternalFunctions    #Importing my external function file
-allTranslations = []        #Declaring a list to hold the translations.
-spaceIndex = 0              #Declaring a variable to hold an index value to use in loops which concatenate strings together.
-
-#I need the user to enter a text message, and I need to turn that string into a list.
-textList = ExternalFunctions.textMessageInput()
+import FileHandler			#Importing my external function file
+#import Translator
+allTranslations = []		#Declaring a list to hold the translations.
+spaceIndex = 0				#Declaring a variable to hold an index value to use in loops which concatenate strings together.
 
 #Then I need to retrieve the first abbreviation and translation and put them in a list.
-myFile = ExternalFunctions.openFile()
+myFile = FileHandler.openFile()
+
+#I need the user to enter a text message, and I need to turn that string into a list.
+textList = FileHandler.textMessageInput()
 
 for line in iter(myFile):
     translationIndex = 2
     textIndex = 0
 
     wordsInLine = line.split()
-	#print(wordsInLine)
+	print(wordsInLine)	#TEST
     lengthOfList = len(wordsInLine)
 
     #Then I need to check the text message against index 0 in the list.
