@@ -1,24 +1,25 @@
-#GETTING THE TEXT MESSAGE
-def textMessageInput():
-    message = str(input("Please enter your text message:\n")).upper()
-    messageList = message.split()
-    return messageList
+def OpenFile():
+	languageOptionsFile = open("LanguageOptions.txt")
+	languageOptions = [""]
 
-#OPENING THE TRANSLATION FILE
-def openFile():
-	userInput = ""
-	#runLoop = True
+	#Import Language Options
+	languageOptions = languageOptionsFile.readlines()
+	languageOptionsFile.close()
+
+	print("Which language would you like to translate?")
+	print("OPTIONS:")
+
+	for index in range(len(languageOptions)):
+		languageOptions[index] = languageOptions[index][:-1]
+
+	for option in languageOptions:
+		print(option)
 
 	while (True):
-		fileName = str(input("Please enter the name of the file you wish to use: "))
-		print("The file name you've entered is: ", fileName)
-		userInput = str(input("Is this correct? (Y/N) -- "))
+		language = str(input("INPUT: "))
 
-		if (userInput[0].upper() == Y):
-			break
+		for option in languageOptions:
+			if (language == option):
+				return open(option + ".txt", "r")
 
-	if (fileName[-4:] != ".txt"):
-		fileName += ".txt"
-		print("Filename corrected to: ", fileName)
-
-    return open(fileName, "r")
+		print("INVALID INPUT -- Please try again!")
