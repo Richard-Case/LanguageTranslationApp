@@ -1,6 +1,6 @@
 def MessageToTranslate():
-    message = str(input("Please enter your text message:\n")).upper()
-    return message.split()
+	message = str(input("\nPlease enter your text message:\n")).upper()
+	return message.split()
 
 def TranslateMessage(translationFile):
 	spaceIndex = 0
@@ -11,7 +11,6 @@ def TranslateMessage(translationFile):
 	    textIndex = 0
 
 	    wordsInLine = line.split()
-		#print(wordsInLine)	#TEST
 	    lengthOfList = len(wordsInLine)
 
 	    #Then I need to check the text message against index 0 in the list.

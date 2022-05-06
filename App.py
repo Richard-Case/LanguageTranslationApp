@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #Write a program that will take a text meggage and translate it into words that your grandparents could understand.
 #For example: "So funny LOL ROTFL" would be converted to "So funny LAUGHING OUT LOUD ROLLING ON THE FLOOR LAUGHING."
 
@@ -8,16 +10,20 @@
 #Importing my external function files
 import FileHandler
 import Translator
+import Utilities
 
-myFile = FileHandler.OpenFile()
+language = FileHandler.ChooseLanguage()
 
 while (True):
-	translatedMessage = Translator.TranslateMessage(myFile)
+	translationFile = FileHandler.OpenFile(language)
+	translatedMessage = Translator.TranslateMessage(translationFile)
 	print(translatedMessage)
-	userInput = str(input("Would you like to translate another word? (Y/N) -- "))
+	userInput = str(input("\nWould you like to translate another word? (Y/N) -- "))
 
 	if (userInput[0].upper() == 'N'):
 		break
 
-input("Press ENTER to exit.")
-myFile.close()
+input("\nPress ENTER to exit.")
+translationFile.close()
+
+Utilities.ClearTerminal()

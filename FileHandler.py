@@ -1,4 +1,4 @@
-def OpenFile():
+def ChooseLanguage():
 	languageOptionsFile = open("LanguageOptions.txt")
 	languageOptions = [""]
 
@@ -16,10 +16,13 @@ def OpenFile():
 		print(option)
 
 	while (True):
-		language = str(input("INPUT: "))
+		language = str(input("\nINPUT: "))
 
 		for option in languageOptions:
 			if (language == option):
-				return open(option + ".txt", "r")
+				return language
 
 		print("INVALID INPUT -- Please try again!")
+
+def OpenFile(language):
+	return open(language + ".txt", "r")
