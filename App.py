@@ -8,7 +8,7 @@ import FileHandler
 import Translator
 import Utilities
 
-while (True)
+while (True):
 	language = FileHandler.ChooseLanguage()
 	
 	while (True):
