@@ -16,16 +16,13 @@ while (True):
 		translatedMessage = Translator.TranslateMessage(translationFile)
 		print(translatedMessage)
 		userInput = str(input("\nWould you like to translate another word? (Y/N) -- "))
-	
 		if (userInput[0].upper() == 'N'):
 			break
-	
+
+	translationFile.close()
 	userInput = str(input("\nWould you like to translate a different language? (Y/N) -- "))
-	
 	if (userInput[0].upper() == 'N'):
 		break
 	
 input("\nPress ENTER to exit.")
-translationFile.close()
-
 Utilities.ClearTerminal()

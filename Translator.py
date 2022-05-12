@@ -1,5 +1,5 @@
 def MessageToTranslate():
-	message = str(input("\nPlease enter your text message: "))
+	message = str(input("\nPlease enter your text message: ")).lower()
 	return message.split()
 
 def TranslateMessage(translationFile):

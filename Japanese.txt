@@ -1,0 +1,11 @@
+ありがとう				- THANK YOU
+ありがとうございます		- THANK YOU SO MUCH
+水						- WATER
+一						- ONE
+二						- TWO
+三						- THREE
+四						- FOUR
+北						- NORTH
+東						- EAST
+南						- SOUTH
+西						- WEST
